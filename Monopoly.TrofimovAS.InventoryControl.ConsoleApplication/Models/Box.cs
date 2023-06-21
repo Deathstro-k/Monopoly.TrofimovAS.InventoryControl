@@ -10,7 +10,10 @@ public class Box : InventoryEntity
         ExpirationDate = productionDate.AddDays(100);
     }
     public Box(double width, double height, double lenght, double weight, DateTime expirationDate, DateTime? productionDate)
-        : base(width, height, lenght, weight) => (ExpirationDate, ProductionDate) = (expirationDate, productionDate);
-   
+        : base(width, height, lenght, weight)
+    {        
+        ExpirationDate = expirationDate;
+        ProductionDate = productionDate;
+    }
    
 }

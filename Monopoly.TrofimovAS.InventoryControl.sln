@@ -5,6 +5,8 @@ VisualStudioVersion = 17.6.33801.468
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Monopoly.TrofimovAS.InventoryControl.ConsoleApplication", "Monopoly.TrofimovAS.InventoryControl.ConsoleApplication\Monopoly.TrofimovAS.InventoryControl.ConsoleApplication.csproj", "{55C60B35-E938-4E5B-8D7B-5488D85B2AEF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Monopoly.TrofimovAS.InventoryControl.Tests", "Monopoly.TrofimovAS.InventoryControl.Tests\Monopoly.TrofimovAS.InventoryControl.Tests.csproj", "{AB9F6CEE-4288-4B02-A302-243C5AB83576}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{55C60B35-E938-4E5B-8D7B-5488D85B2AEF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{55C60B35-E938-4E5B-8D7B-5488D85B2AEF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{55C60B35-E938-4E5B-8D7B-5488D85B2AEF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AB9F6CEE-4288-4B02-A302-243C5AB83576}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AB9F6CEE-4288-4B02-A302-243C5AB83576}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AB9F6CEE-4288-4B02-A302-243C5AB83576}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AB9F6CEE-4288-4B02-A302-243C5AB83576}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
