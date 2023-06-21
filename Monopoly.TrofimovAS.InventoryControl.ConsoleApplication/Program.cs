@@ -1,10 +1,10 @@
-﻿namespace Monopoly.TrofimovAS.InventoryControl.ConsoleApplication
+﻿using Monopoly.TrofimovAS.InventoryControl.ConsoleApplication.Models;
+
+namespace Monopoly.TrofimovAS.InventoryControl.ConsoleApplication;
+
+internal class Program
 {
-    internal class Program
+    static void Main(string[] args)
     {
-        static void Main(string[] args)
-        {
-            Console.WriteLine("Hello, World!");
-        }
     }
 }
