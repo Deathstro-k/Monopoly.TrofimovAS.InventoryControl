@@ -3,30 +3,32 @@ using Monopoly.TrofimovAS.InventoryControl.ConsoleApplication.Models.Base;
 
 namespace Monopoly.TrofimovAS.InventoryControl.ConsoleApplication.Models;
 public class Pallet : InventoryEntity
-{ 
-    public Pallet(double width, double height, double lenght, double weight = 30)
-        : base(width, height, lenght, weight)
-    {
-        Boxes = new BoxesCollection(this);
-    }
-    public BoxesCollection Boxes { get; }
+{
+    public Pallet(Dimensions dimensions, double weight = 30) : base(dimensions, weight)
+        => Boxes = new(this);
    
-    public override double Weight => base.Weight + Boxes.Sum(b=>b.Weight);
-    public override double Volume => base.Volume + Boxes.Sum(b=>b.Volume);
+    public BoxesCollection Boxes { get; }
 
-    public override DateTime? ExpirationDate => Boxes.Min(p => p.ExpirationDate);
-    public override DateTime? ProductionDate => Boxes.Min(b => b.ProductionDate);
+    public override Dimensions Dimensions { get => base.Dimensions; set => base.Dimensions = value; }
+
+    public double SummaryVolume => Boxes.Sum(box=>box.Dimensions.Volume) + Dimensions.Volume;
+
+    public double SummaryWeight => Boxes.Sum(box => box.Weight) + Weight;
+
+    public override DateTime? ExpirationDate => Boxes.Min(box => box.ExpirationDate);
+    public override DateTime? ProductionDate => Boxes.Min(box => box.ProductionDate);
 
 
     public override string ToString()
     {
         return $"Id:{Id}\n" +
-               $"Volume:{Volume} cm^3 ({Lenght}x{Width}x{Height})\n" +
-               $"Weight:{Weight} kg\n" +
+               $"Summary volume:{SummaryVolume} cm^3\n" +
+               $"Summary weight:{SummaryWeight} kg\n" +
+               $"Pallet dimensions:{Dimensions}\n" +               
+               $"Pallet weight:{Weight} kg\n" +
                $"Production date:{ProductionDate}\n" +
                $"Expiration date:{ExpirationDate}\n" +
                $"Boxes count:{Boxes.Count}";
     }
-
 }
-    
+
