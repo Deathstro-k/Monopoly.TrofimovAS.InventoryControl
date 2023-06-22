@@ -7,4 +7,14 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Compile Remove="Infrastructure\Conventer\**" />
+    <EmbeddedResource Remove="Infrastructure\Conventer\**" />
+    <None Remove="Infrastructure\Conventer\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+  </ItemGroup>
+
 </Project>

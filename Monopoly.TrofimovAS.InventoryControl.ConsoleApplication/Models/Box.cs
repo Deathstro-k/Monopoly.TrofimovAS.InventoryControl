@@ -15,4 +15,5 @@ public class Box : InventoryEntity
         ProductionDate = productionDate;
         ExpirationDate = expirationDate;
     }
+    public Box() { }    
 }

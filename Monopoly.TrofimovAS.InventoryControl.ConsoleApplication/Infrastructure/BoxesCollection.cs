@@ -1,11 +1,13 @@
 ﻿using Monopoly.TrofimovAS.InventoryControl.ConsoleApplication.Models;
 
 namespace Monopoly.TrofimovAS.InventoryControl.ConsoleApplication.Infrastructure;
-public class BoxesCollection:List<Box>
+public class BoxesCollection : List<Box>
 {
     private readonly Pallet _pallet;
-    public BoxesCollection(Pallet pallet) => _pallet = pallet;
+    
+    public BoxesCollection(Pallet pallet) { _pallet = pallet; }
 
+    public BoxesCollection() {}    
     public new void Add(Box box)
     {
         if (IsBoxSmallerPallet(box) && IsUniqueBoxId(box))
