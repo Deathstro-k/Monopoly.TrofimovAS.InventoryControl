@@ -6,7 +6,7 @@ public static class JsonFileStorage
     public static void WriteToFile<T>(this IEnumerable<T> collection, string filename)
     {
         string json = JsonConvert.SerializeObject(collection);
-        File.WriteAllText(filename, json);
+        File.WriteAllText(filename, json);        
     }
 
     public static IEnumerable<T> ReadFromFile<T>(string filename)

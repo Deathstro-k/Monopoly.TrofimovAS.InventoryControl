@@ -17,7 +17,7 @@ public static class InventoryItemsGenerator
             var randomWeight = _random.Next(1,100);
 
             var dimensions = new Dimensions(randomDimension,randomDimension,randomDimension);
-            var box = new Box(dimensions, randomWeight, DateTime.Now.AddDays(_random.Next(100)));
+            var box = new Box(dimensions, randomWeight, DateTime.Now.AddDays(_random.Next(-100,100)));
             boxes.Add(box);
         }
         return boxes;
@@ -38,5 +38,4 @@ public static class InventoryItemsGenerator
         boxes.ForEach(box => pallets[_random.Next(0, pallets.Count)].Boxes.Add(box));
         return pallets;
     }
-
 }

@@ -1,6 +1,5 @@
 using Monopoly.TrofimovAS.InventoryControl.ConsoleApplication.Infrastructure;
 using Monopoly.TrofimovAS.InventoryControl.ConsoleApplication.Models;
-using System.ComponentModel.DataAnnotations;
 
 namespace Monopoly.TrofimovAS.InventoryControl.Tests.Models;
 public class PalletTests
@@ -58,5 +57,4 @@ public class PalletTests
         }
         Assert.True(pallet.Weight == actual);
     }
-
 }

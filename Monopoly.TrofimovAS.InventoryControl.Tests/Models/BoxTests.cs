@@ -14,5 +14,4 @@ public class BoxTests
 
         Assert.That(actualBox.ExpirationDate, Is.EqualTo(expectedBox.ExpirationDate));
     }    
-
 }

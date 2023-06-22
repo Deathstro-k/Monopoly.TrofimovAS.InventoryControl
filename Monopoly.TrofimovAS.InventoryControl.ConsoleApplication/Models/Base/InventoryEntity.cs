@@ -1,5 +1,4 @@
-﻿
-using Monopoly.TrofimovAS.InventoryControl.ConsoleApplication.Infrastructure;
+﻿using Monopoly.TrofimovAS.InventoryControl.ConsoleApplication.Infrastructure;
 using Newtonsoft.Json;
 
 namespace Monopoly.TrofimovAS.InventoryControl.ConsoleApplication.Models.Base;
